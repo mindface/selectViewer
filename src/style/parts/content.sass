@@ -1,0 +1,231 @@
+@use "./variable" as *
+
+.content
+  max-width: 1280px
+  margin: auto 0
+  padding: 8px
+  min-height: calc( 100vh - 80px )
+  &-bord
+    padding: 16px 8px
+    &__items
+      display: flex
+      flex-wrap: wrap
+      .item-card
+        max-width: 320px
+        position: relative
+        width: 100%
+        margin: 8px
+        .cards
+          display: flex
+          &-box
+            max-width: 100%
+            overflow: auto
+        .cards > .card,
+        .face
+          padding: 8px
+          box-shadow: $shadow
+          background-color: $white-color
+          border-radius: $border-radius
+          overflow-wrap: break-word
+        .cards > .card
+          max-width: 320px
+          width: 100%
+          margin-right: 16px
+        &.total
+          max-width: 100%
+        .card-btns
+          .btn
+            position: absolute
+            top: 4px
+            right: 4px
+        .title
+          padding-bottom: 8px
+          font-size: 1.6rem
+          font-weight: 600
+        .detail
+          height: 38px
+          padding-bottom: 8px
+          line-height: 1.7
+        .category
+          .s
+            display: inline-block
+            margin: 0 2px 0 0
+            padding: 2px 4px
+            line-height: 1.4
+            color: $white-color
+            background-color: $base-color
+            border-radius: $border-radius
+
+  .front-card
+    max-width: 320px
+    width: 100%
+    margin: 0 8px 0 0
+    padding: 8px
+    box-shadow: $shadow
+    background-color: $white-color
+    border-radius: $border-radius
+    &.view
+      .icon
+        display: inline-block
+      .front-card
+        &__inner
+          position: fixed
+          top: 0
+          left: 0
+          right: 0
+          bottom: 0
+          margin: auto
+          padding: 16px 
+          height: 80vh
+          width: 80vw
+          background-color: $white-color
+          border-radius: $border-radius
+          box-shadow: $shadow
+          transition: 0.3s all
+        &__info
+          display: block
+        &__users
+          .icon-box
+            margin-right: 0
+      .user-dialog
+        width: 120px
+    &__detail
+      .title
+        padding: 0 0 8px
+      > .title
+        padding: 8px 0
+      .description
+        padding: 0 0 8px
+        border-bottom: 1px solid $sub-bg-color
+      .info-box
+        display: flex
+        justify-content: center
+        .info
+          padding: 8px
+          .caption
+            padding: 0 0 8px
+          .number
+            font-weight: 600
+          .en
+            display: inline-flex
+            padding: 0 4px 0 0
+          .ja
+            display: inline-flex
+            font-size: 1.2rem
+      .info-detail-box
+        display: flex
+        flex-wrap: wrap
+    &__info
+      padding: 0 0 8px
+      display: flex
+    &__users
+      .icon
+        background-color: $sub-bg-color
+        &-box
+          display: inline-block
+    &--icon
+      margin-right: 8px
+    &__users
+      .description
+        padding: 0 0 8px
+      .icon-box
+        margin-right: -8px
+
+  .task-card
+    max-width: 200px
+    width: 100%
+    margin: 8px
+    padding: 8px
+    border: 2px solid $sub-bg-color
+    border-radius: $border-radius
+    .description
+      padding: 8px 0
+
+  .info-user
+    display: inline-block
+    .icon-box
+      padding: 0 8px 0 0
+    .view-user-info
+      &__name,
+      &__detail,
+      &__belongId
+        padding: 8px
+    .dialog
+      max-height: 330px
+      min-height: 210px
+      max-width: 420px
+    .name
+      display: inline-block
+      padding: 0 0 0 8px
+
+  .list-rod
+    margin: 0 0 8px
+    padding: 8px
+    background-color: $white-color
+    .icon
+      display: inline-block
+    &__detail
+      display: flex
+      align-items: center
+      .description
+        max-width: calc( 100% - 173px )
+        width: 100%
+      .date
+        max-width: 120px
+        width: 100%
+      .list-menu
+        position: relative
+        height: 30px
+        width: 30px
+        cursor: pointer
+        &:hover
+          background-color: $base-color
+          &::after
+            background-color: $white-color
+            box-shadow: 0 5px 0 0 $white-color, 0 -5px 0 0 $white-color
+        &::after
+          content: ""
+          position: absolute
+          top: 0
+          left: 0
+          right: 0
+          bottom: 0
+          margin: auto
+          height: 5px
+          width: 5px
+          border-radius: 50%
+          background-color: $base-color
+          box-shadow: 0 7px 0 0 $base-color, 0 -7px 0 0 $base-color
+          transition: box-shadow 0.2s
+        .menu-items
+          position: absolute
+          top: 100%
+          right: 0
+          width: 120px
+          background-color: $white-color
+          box-shadow: $shadow
+          .item
+            padding: 8px
+      .next-page-select
+        position: fixed
+        z-index: 1
+        top: 0
+        left: 0
+        height: 100vh
+        width: 100vw
+        padding: 16px
+        background-color: $white-color
+        .content-phase
+          display: flex
+        .phase
+          padding: 8px
+          overflow: auto
+          max-height: calc(100vh - 32px)
+        .item
+          margin-bottom: 8px
+        .btn
+          position: absolute
+          top: 8px
+          right: 8px
+        .text
+          padding: 8px

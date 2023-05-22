@@ -1,0 +1,50 @@
+@use "./parts/variable" as *
+@use "./parts/header"
+@use "./parts/content"
+@use "./parts/navi"
+@use "./parts/dialog"
+@use "./parts/item"
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+html
+  font-size: 62.5% 
+  line-height: 1
+
+body
+  min-height: 100vh
+  background-color: $back-color
+
+ul, ol
+  list-style: none
+
+.link
+  display: inline-block
+  padding: 8px
+  text-decoration: none
+  color: $base-color
+  &:hover
+    color: $white-color
+    background-color: $base-color
+
+.pointer
+  cursor: pointer
+
+.btn
+  padding: 4px
+  border: none
+  color: $white-color
+  background-color: $base-color
+  border-radius: $border-radius
+  cursor: pointer
+  &.active
+    color: $base-color
+    background-color: $white-color
+
+.icon
+  padding: 4px
+  background-color: $base-color
+  border-radius: $border-radius
