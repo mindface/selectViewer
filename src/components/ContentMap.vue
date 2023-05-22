@@ -86,7 +86,7 @@ onMounted(async () => {
   <div class="item-method__inner">
     <div v-if="d" ref="targetElement" class="" id="google-charts">
       <GChart
-        :settings="{ packages: ['geochart', 'table', 'map'], mapsApiKey: 'AIzaSyBtB5YhAvaOXrLMOm_kWm3LT7fME8xHlzU' }"
+        :settings="{ packages: ['geochart', 'table', 'map'], mapsApiKey: '' }"
         type="GeoChart"
         :data="dataList"
         :options="options"

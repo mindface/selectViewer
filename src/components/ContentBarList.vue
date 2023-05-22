@@ -17,7 +17,9 @@ const changeAction = () => {
 <template>
   <div class="content-list">
     <div class="content-list__items">
-      <ListItem />
+      <div v-for="t in [1,2,3,5,6]">
+        <ListItem />
+      </div>
     </div>
   </div>
 </template>

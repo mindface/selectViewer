@@ -4,6 +4,7 @@ import type { ImageModelList } from "../types/imageModel";
 import { ref } from "vue";
 import imageModelData from "../json/imageModelData.json";
 import methodData from "../json/methodData.json";
+
 interface Props {
   id?: string;
   type?: string;
@@ -73,18 +74,18 @@ const setMethodList = () => {
         <div v-if="nextPageView" class="next-page-select">
           <div class="content-phase">
             <div class="phase select-info">
-              <div class="text" @click="movePage">次のページ</div>
-              <div class="text" @click="() => setSelectInfo('select01')" >作成された議事録</div>
-              <div class="text" @click="() => setSelectInfo('select03')">作成されたエビデンスを確認</div>
+              <div class="text btn" @click="movePage">次のページ</div>
+              <div class="text btn" @click="() => setSelectInfo('select01')" >作成された議事録</div>
+              <div class="text btn" @click="() => setSelectInfo('select03')">作成されたエビデンスを確認</div>
             </div>
             <div class="phase">
-              <div class="item" v-for="item in setImageModeList()"><ItemImager /></div>
+              <div class="item" v-for="item in setImageModeList()"><ItemImager :key="`ItemImager${item.id}`" /></div>
             </div>
             <div class="phase">
-              <div class="item" v-for="item in setMethodList()"><ItemMethod /></div>
+              <div class="item" v-for="item in setMethodList()"><ItemMethod :key="`ItemMethod${item.id}`" /></div>
             </div>
           </div>
-          <div class="btn" @click="nextPageViewAction">close</div>
+          <div class="btn close-btn" @click="nextPageViewAction">close</div>
         </div>
       </div>
     </div>
