@@ -1,13 +1,18 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  srcDir:"./src",
+  srcDir: "./src",
   // ssr: false,
-  css: [
-    { src: "~/style/base.sass" }
-  ],
+  css: [{ src: "~/style/base.sass" }],
   proxy: {
     "/": {
-      target: "http://ewq1234.php.xdomain.jp"
+      target: "http://ewq1234.php.xdomain.jp",
+    },
+  },
+  runtimeConfig: {
+    public: {
+      apiKey: "",
+      apiUrl: "",
+      apiPostUrl: ""
     }
   }
-})
+});

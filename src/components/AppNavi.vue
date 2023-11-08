@@ -1,13 +1,9 @@
 <script lang="ts" setup>
 const emitAction = defineEmits(["switchAction"]);
-const changeAction = (e:Event) => {
+const changeAction = (e: Event) => {
   emitAction("switchAction");
 };
-const list = [
-{ id: "1",path: "/", name: "home"},
-{ id: "2",path: "/viewer", name: "viewer"},
-{ id: "3",path: "/patternInfo", name: "patternInfo"}
-];
+import list from "../json/pash.json";
 </script>
 
 <template>
@@ -15,7 +11,9 @@ const list = [
     <div class="overlay" @click.stop="changeAction"></div>
     <div class="app-navi__inner" @click="($event) => $event.preventDefault()">
       <nav class="app-navi__nav">
-        <p v-for="item in list"><NuxtLink class="link" :to="item.path">{{ item.name }}</NuxtLink></p>
+        <p v-for="item in list">
+          <NuxtLink class="link" :to="item.path">{{ item.name }}</NuxtLink>
+        </p>
       </nav>
     </div>
   </div>

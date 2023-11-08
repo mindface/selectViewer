@@ -56,6 +56,48 @@
             background-color: $base-color
             border-radius: $border-radius
 
+  &-front-bord
+    .bords
+      display: flex
+      flex-wrap: wrap
+    .bord-showcase
+      padding: 8px
+      background-color: $white-color
+      .item
+        max-width: 300px
+        width: 100%
+        margin: 0 8px 0 0
+        padding: 16px
+        border: 1px solid $base-color
+        .title,
+        .detail
+          padding: 0 0 8px
+        .aid
+          display: inline-block
+          margin: 0 4px 0 0
+          padding: 4px
+          background-color: $base-color
+          color: $white-color
+      .caption
+        padding: 8px
+    .front-bord-dialog
+      &__detail
+        max-height: 70vh
+        display: flex
+        flex-wrap: wrap
+        overflow: auto
+        overscroll-behavior: none
+      .select-phase
+        .caption
+          display: inline-block
+          border-bottom: 1px solid $base-color
+        .phase
+          display: flex
+          margin: 0 0 8px
+          border-bottom: 1px solid $base-color
+          &-item
+            padding: 8px
+
   .front-card
     max-width: 320px
     width: 100%
@@ -90,6 +132,7 @@
       .user-dialog
         width: 120px
     &__detail
+      overscroll-behavior-y: none
       .title
         padding: 0 0 8px
       > .title
@@ -221,6 +264,7 @@
           padding: 8px
           overflow: auto
           max-height: calc(100vh - 32px)
+          overscroll-behavior-y: none
         .item
           margin-bottom: 8px
         .close-btn

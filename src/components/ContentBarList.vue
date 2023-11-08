@@ -10,14 +10,14 @@ const props = defineProps<Props>();
 const emitAction = defineEmits(["switchAction"]);
 const changeAction = () => {
   switchMenu.value = !switchMenu.value;
-  emitAction("switchAction",switchMenu.value);
+  emitAction("switchAction", switchMenu.value);
 };
 </script>
 
 <template>
   <div class="content-list">
     <div class="content-list__items">
-      <div v-for="t in [1,2,3,5,6]">
+      <div v-for="t in [1, 2, 3, 5, 6]">
         <ListItem />
       </div>
     </div>

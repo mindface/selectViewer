@@ -1,0 +1,31 @@
+@use "./variable" as *
+
+.comparing
+  .iframe
+    width: 100%
+    height: 100%
+  &-list
+    display: flex
+    flex-wrap: wrap
+  &-item
+    position: relative
+    max-width: 50%
+    max-height: 48vh
+    width: 100%
+    overflow: auto
+    overscroll-behavior: scroll
+    &:nth-child(1)
+      background-color: #86de2e
+    &:nth-child(2)
+      background-color: #2ecfde
+    &:nth-child(3)
+      background-color: #a62ede
+    &:nth-child(4)
+      background-color: #dec42e
+    .struct
+      width: 100vw
+      height: 100vh
+    .update-action
+      position: absolute
+      top: 0
+      left: 0

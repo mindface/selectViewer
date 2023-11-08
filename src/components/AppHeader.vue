@@ -1,18 +1,14 @@
 <script lang="ts" setup>
 import { ref } from "vue";
-interface Props {
-  switch: boolean;
-}
 const switchMenu = ref(false);
-const props = defineProps<Props>();
 const emitAction = defineEmits(["switchAction"]);
 const changeAction = () => {
   switchMenu.value = !switchMenu.value;
-  emitAction("switchAction",switchMenu.value);
+  emitAction("switchAction", switchMenu.value);
 };
 const changeClassAction = () => {
-  return switchMenu ? 'g-menu pointer' : 'g-menu pointer';
-}
+  return switchMenu ? "g-menu pointer" : "g-menu pointer";
+};
 </script>
 
 <template>

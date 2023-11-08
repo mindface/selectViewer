@@ -7,7 +7,7 @@ const list = [
   {
     id: 2,
     path: "viewer",
-  }
+  },
 ];
 </script>
 

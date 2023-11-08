@@ -1,0 +1,90 @@
+@use "./variable" as *
+
+.content
+  &-purpose
+    padding: 16px
+    .action-btns
+      padding: 0 0 8px
+
+.purpose-and-struct
+  max-width: 1280px
+  margin: 0 auto
+  &--item
+    display: flex
+    &:nth-child(odd)
+      background-color: $thin-color      
+    .title
+      padding: 0 0 8px
+  &__purpose
+    position: relative
+    max-width: 30%
+    width: 100%
+    padding: 8px
+    &:hover
+      .content-dialog
+        display: block
+    .content-dialog
+      position: absolute
+      right: 8px
+      bottom: 8px
+      display: none
+  &__struct
+    max-width: 70%
+    width: 100%
+    padding: 8px
+    .way
+      display: flex
+      .title
+        max-width: 30%
+        width: 100%
+      .info
+        max-width: 70%
+        width: 100%
+.purpose
+  &-dialog
+    .field
+      padding: 0 0 8px
+      .label
+        display: inline-block
+        padding: 0 8px 0 0
+
+    .add-area
+      display: flex
+      align-items: flex-start
+    .way
+      &-list
+        width: 100%
+        padding: 8px
+        .caption
+          width: 100%
+          padding: 8px
+          display: flex
+          border-bottom: 1px solid $thin-color
+      &-item
+        display: flex
+        padding: 8px
+        &:nth-child(odd)
+          background-color: $thin-color
+      &-title
+        max-width: 180px
+        width: 100%
+      &-info
+        max-width: calc(100% - 180px)
+        width: 100%
+.struct
+  &-dialog
+    .fields,
+    .field
+      padding: 0 0 8px
+    .struct-item
+      display: flex
+      padding: 8px
+      &:nth-child(odd)
+        background-color: $thin-color
+      .title
+        max-width: 30%
+        width: 100%
+        padding: 0
+      .detail
+        max-width: 70%
+        width: 100%

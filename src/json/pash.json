@@ -1,0 +1,9 @@
+[
+  { "id": "1", "path": "/", "name": "home" },
+  { "id": "2", "path": "/viewer", "name": "viewer" },
+  { "id": "3", "path": "/patternInfo", "name": "patternInfo" },
+  { "id": "4", "path": "/makeImage", "name": "makeImage" },
+  { "id": "5", "path": "/comparingStruct", "name": "comparingStruct" },
+  { "id": "6", "path": "/purposeAndStruct", "name": "purposeAndStruct" },
+  { "id": "7", "path": "/viewerStyling", "name": "viewerStyling" }
+]

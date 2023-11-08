@@ -15,26 +15,25 @@ const item = ref<ItemCard>({
   title: "",
   detail: "",
   category: "",
-  selectedId: ""
+  selectedId: "",
 });
 
 onMounted(() => {
-  if(cardList.value.length > 0) {
+  if (cardList.value.length > 0) {
     item.value = cardList.value[0];
   }
 });
 
 const viewSwitchAction = () => {
   viewSwitch.value = !viewSwitch.value;
-}
-
+};
 </script>
 
 <template>
-  <div :class="viewSwitch ? 'item-card total':'item-card top-only'">
+  <div :class="viewSwitch ? 'item-card total' : 'item-card top-only'">
     <div class="card-btns">
       <button class="btn" @click="viewSwitchAction">
-        {{ viewSwitch ? "total": "top" }}
+        {{ viewSwitch ? "total" : "top" }}
       </button>
     </div>
     <div v-if="!viewSwitch" class="face">
@@ -45,7 +44,10 @@ const viewSwitchAction = () => {
       </div>
     </div>
     <div v-else class="cards-box">
-      <div class="cards flex" :style="{width:`${(cardList ?? []).length*328}px`}">
+      <div
+        class="cards flex"
+        :style="{ width: `${(cardList ?? []).length * 328}px` }"
+      >
         <div v-for="card in cardList" class="card">
           <h3 class="title">{{ card.title }}</h3>
           <div class="detail">{{ card.detail }}</div>

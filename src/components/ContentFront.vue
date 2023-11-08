@@ -13,7 +13,7 @@ const props = defineProps<Props>();
 const emitAction = defineEmits(["switchAction"]);
 const changeAction = () => {
   switchMenu.value = !switchMenu.value;
-  emitAction("switchAction",switchMenu.value);
+  emitAction("switchAction", switchMenu.value);
 };
 </script>
 

@@ -1,4 +1,3 @@
-
 export interface ImageModel {
   id: string;
   name: string;

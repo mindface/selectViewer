@@ -12,156 +12,160 @@ const item = ref<ItemCard>({
   title: "",
   detail: "",
   category: "",
-  selectedId: ""
+  selectedId: "",
 });
 
 onMounted(() => {
-  if(props.items) {
+  if (props.items) {
     item.value = props.items[0];
   }
 });
 
 const viewSwitchAction = () => {
   viewSwitch.value = !viewSwitch.value;
-}
+};
 </script>
 
 <template>
-  <div :class="viewSwitch ? 'item-card total':'item-card top-only'">
+  <div :class="viewSwitch ? 'item-card total' : 'item-card top-only'">
     <ul class="wide-list">
-      <li class="wide-item">01
+      <li class="wide-item">
+        01
         <div class="filelds">
           <div class="fileld">
             <label for="" class="label">label</label>
-            <input type="text" class="input">
+            <input type="text" class="input" />
           </div>
           <div class="fileld">
             <label for="" class="label">label</label>
-            <input type="text" class="input">
+            <input type="text" class="input" />
           </div>
           <div class="fileld">
             <label for="" class="label">label</label>
-            <input type="text" class="input">
+            <input type="text" class="input" />
           </div>
         </div>
       </li>
-      <li class="wide-item">02
+      <li class="wide-item">
+        02
         <div class="filelds">
           <div class="fileld">
             <label for="" class="label">label</label>
-            <input type="text" class="input">
+            <input type="text" class="input" />
           </div>
           <div class="fileld">
             <label for="" class="label">label</label>
-            <input type="text" class="input">
+            <input type="text" class="input" />
           </div>
           <div class="fileld">
             <label for="" class="label">label</label>
-            <input type="text" class="input">
+            <input type="text" class="input" />
           </div>
         </div>
       </li>
-      <li class="wide-item">03
+      <li class="wide-item">
+        03
         <div class="filelds">
           <div class="fileld">
             <label for="" class="label">label</label>
-            <input type="text" class="input">
+            <input type="text" class="input" />
           </div>
           <div class="fileld">
             <label for="" class="label">label</label>
-            <input type="text" class="input">
+            <input type="text" class="input" />
           </div>
           <div class="fileld">
             <label for="" class="label">label</label>
-            <input type="text" class="input">
+            <input type="text" class="input" />
           </div>
           <div class="fileld">
             <label for="" class="label">label</label>
-            <input type="text" class="input">
+            <input type="text" class="input" />
           </div>
           <div class="fileld">
             <label for="" class="label">label</label>
-            <input type="text" class="input">
+            <input type="text" class="input" />
           </div>
           <div class="fileld">
             <label for="" class="label">label</label>
-            <input type="text" class="input">
+            <input type="text" class="input" />
           </div>
           <div class="fileld">
             <label for="" class="label">label</label>
-            <input type="text" class="input">
+            <input type="text" class="input" />
           </div>
           <div class="fileld">
             <label for="" class="label">label</label>
-            <input type="text" class="input">
+            <input type="text" class="input" />
           </div>
           <div class="fileld">
             <label for="" class="label">label</label>
-            <input type="text" class="input">
+            <input type="text" class="input" />
           </div>
           <div class="fileld">
             <label for="" class="label">label</label>
-            <input type="text" class="input">
+            <input type="text" class="input" />
           </div>
           <div class="fileld">
             <label for="" class="label">label</label>
-            <input type="text" class="input">
+            <input type="text" class="input" />
           </div>
           <div class="fileld">
             <label for="" class="label">label</label>
-            <input type="text" class="input">
+            <input type="text" class="input" />
           </div>
           <div class="fileld">
             <label for="" class="label">label</label>
-            <input type="text" class="input">
+            <input type="text" class="input" />
           </div>
           <div class="fileld">
             <label for="" class="label">label</label>
-            <input type="text" class="input">
+            <input type="text" class="input" />
           </div>
           <div class="fileld">
             <label for="" class="label">label</label>
-            <input type="text" class="input">
+            <input type="text" class="input" />
           </div>
           <div class="fileld">
             <label for="" class="label">label</label>
-            <input type="text" class="input">
+            <input type="text" class="input" />
           </div>
           <div class="fileld">
             <label for="" class="label">label</label>
-            <input type="text" class="input">
+            <input type="text" class="input" />
           </div>
           <div class="fileld">
             <label for="" class="label">label</label>
-            <input type="text" class="input">
+            <input type="text" class="input" />
           </div>
           <div class="fileld">
             <label for="" class="label">label</label>
-            <input type="text" class="input">
+            <input type="text" class="input" />
           </div>
           <div class="fileld">
             <label for="" class="label">label</label>
-            <input type="text" class="input">
+            <input type="text" class="input" />
           </div>
           <div class="fileld">
             <label for="" class="label">label</label>
-            <input type="text" class="input">
+            <input type="text" class="input" />
           </div>
         </div>
       </li>
-      <li class="wide-item">04
+      <li class="wide-item">
+        04
         <div class="filelds">
           <div class="fileld">
             <label for="" class="label">label</label>
-            <input type="text" class="input">
+            <input type="text" class="input" />
           </div>
           <div class="fileld">
             <label for="" class="label">label</label>
-            <input type="text" class="input">
+            <input type="text" class="input" />
           </div>
           <div class="fileld">
             <label for="" class="label">label</label>
-            <input type="text" class="input">
+            <input type="text" class="input" />
           </div>
         </div>
       </li>
